@@ -8,8 +8,8 @@ function staticLoadPlaces() {
 		{
 			name: "Arvore",
 			location: {
-				lat: 39.427543,
-				lng: -8.947316,
+				lat: 39.427138,
+				lng: -8.947244,
 			},
 		},
 		{
@@ -34,14 +34,10 @@ function renderPlaces(places) {
 			"gps-new-entity-place",
 			`latitude: ${latitude}; longitude: ${longitude};`
 		);
+		model.setAttribute("position", "0 0 0");
 		model.setAttribute("gltf-model", "./assets/asset.gltf");
 		model.setAttribute("rotation", "0 180 0");
-		model.setAttribute("animation-mixer", "");
 		model.setAttribute("scale", "10 10 10");
-
-		model.addEventListener("loaded", () => {
-			window.dispatchEvent(new CustomEvent("gps-entity-place-loaded"));
-		});
 
 		scene.appendChild(model);
 	});
