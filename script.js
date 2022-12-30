@@ -8,8 +8,8 @@ function staticLoadPlaces() {
 		{
 			name: "Arvore",
 			location: {
-				lat: 39.427428,
-				lng: -8.948049,
+				lat: 39.427543,
+				lng: -8.947316,
 			},
 		},
 		{
@@ -34,7 +34,6 @@ function renderPlaces(places) {
 			"gps-entity-place",
 			`latitude: ${latitude}; longitude: ${longitude};`
 		);
-		// model.setAttribute("position", `0 -5 0`);
 		model.setAttribute("gltf-model", "./assets/asset.gltf");
 		model.setAttribute("rotation", "0 180 0");
 		model.setAttribute("animation-mixer", "");
