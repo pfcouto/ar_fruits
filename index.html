@@ -27,8 +27,8 @@
 	<body style="margin: 0; overflow: hidden">
 		<a-scene
 			vr-mode-ui="enabled: false"
-			embedded
-			arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+			arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
+			renderer="antialias: true; alpha: true"
 		>
 			<a-camera
 				gps-new-camera="simulateLatitude: 39.427567; simulateLongitude: -8.946947; gpsMinDistance: 5"
