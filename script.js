@@ -32,7 +32,7 @@ function renderPlaces(places) {
 		let model = document.createElement("a-entity");
 		model.setAttribute("position", {
 			x: 0,
-			y: -5,
+			y: -0.005,
 			z: 0,
 		});
 		model.setAttribute(
