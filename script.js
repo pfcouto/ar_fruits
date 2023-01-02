@@ -8,15 +8,15 @@ function staticLoadPlaces() {
 		{
 			name: "Arvore",
 			location: {
-				lat: 39.427138,
-				lng: -8.947244,
+				lat: 39.734167,
+				lng: -8.821121,
 			},
 		},
 		{
 			name: "Arvore2",
 			location: {
-				lat: 39.427551,
-				lng: -8.947484,
+				lat: 39.733845,
+				lng: -8.820798,
 			},
 		},
 	];
