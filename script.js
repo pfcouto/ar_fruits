@@ -1,3 +1,29 @@
+// WEB Sockets
+var W3CWebSocket = require("websocket").w3cwebsocket;
+
+var client = new W3CWebSocket("ws://172.22.21.135:3306", "echo-protocol");
+
+client.onerror = function () {
+	console.log("Connection Error");
+};
+
+client.onopen = function () {
+	console.log("WebSocket Client Connected");
+};
+
+client.onclose = function () {
+	console.log("Client Closed");
+};
+
+client.onmessage = function (e) {
+	if (typeof e.data === "string") {
+		console.log("Recebido!");
+		if (e.data != "ESTOU A ESPERA") {
+			loadApples(e.data);
+		}
+	}
+};
+
 window.onload = () => {
 	let places = staticLoadPlaces();
 	renderPlaces(places);
