@@ -36,7 +36,7 @@ function renderPlaces(places) {
 		// 	z: 0,
 		// });
 		model.setAttribute(
-			"gps-entity-place",
+			"gps-new-entity-place",
 			`latitude: ${latitude}; longitude: ${longitude};`
 		);
 		model.setAttribute("gltf-model", "./assets/asset.gltf");
