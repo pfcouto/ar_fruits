@@ -1,5 +1,5 @@
 //websocket client
-var ws = new WebSocket("wss://pedromario.duckdns.org/");
+var ws = new WebSocket("wss://sockets-pedromario.duckdns.org/");
 //websocket connection
 ws.onopen = function () {
 	console.log("Connected to server");
@@ -78,7 +78,7 @@ function loadApples(json) {
 				model.setAttribute("position", `0 ${alt + 0.2} 0`);
 				model.setAttribute("scale", "1 1 1");
 				model.setAttribute("look-at", "[gps-new-camera]");
-				model.setAttribute("color", "black");
+				model.setAttribute("color", "white");
 				model.setAttribute("clickerremove", null);
 				scene.appendChild(model);
 			});
