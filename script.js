@@ -1,5 +1,5 @@
 //websocket client
-var ws = new WebSocket("https://sockets-pedromario.duckdns.org/");
+var ws = new WebSocket("wss://pedromario.duckdns.org/");
 //websocket connection
 ws.onopen = function () {
 	console.log("Connected to server");
