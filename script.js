@@ -69,7 +69,12 @@ function loadApples(json) {
 				console.log(`lat:${lat}, lon:${lon}`);
 				console.log(`x:${x}, y:${y}`);
 
-				model.setAttribute("value", `X: ${lat}\nY: ${lon}\nZ: ${alt};`);
+				model.setAttribute(
+					"value",
+					`X: ${parseFloat(lat).toFixed(7)}\nY: ${parseFloat(lon).toFixed(
+						7
+					)}\nZ: ${parseFloat(alt).toFixed(2)};`
+				);
 
 				model.setAttribute(
 					"gps-new-entity-place",
@@ -78,7 +83,7 @@ function loadApples(json) {
 				model.setAttribute("position", `0 ${alt + 0.2} 0`);
 				model.setAttribute("scale", "1 1 1");
 				model.setAttribute("look-at", "[gps-new-camera]");
-				model.setAttribute("color", "white");
+				model.setAttribute("color", "blue");
 				model.setAttribute("clickerremove", null);
 				scene.appendChild(model);
 			});
