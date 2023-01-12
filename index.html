@@ -27,11 +27,13 @@
 	<body style="margin: 0; overflow: hidden">
 		<a-scene
 			vr-mode-ui="enabled: false"
+			cursor="rayOrigin: mouse"
+			raycaster="near: 0; far: 50000"
 			arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
 			renderer="antialias: true; alpha: true"
 		>
 			<a-camera
-				gps-camera="simulateLatitude: 39.733998; simulateLongitude: -8.821880gpsMinDistance: 500"
+				gps-new-camera="simulateLatitude: 39.734125; simulateLongitude: -8.821235; gpsMinDistance: 500"
 				rotation-reader
 			></a-camera
 		></a-scene>
