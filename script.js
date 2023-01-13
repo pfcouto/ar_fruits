@@ -43,7 +43,7 @@ function loadApples(json) {
 			model.setAttribute("material", `color: red`);
 			model.setAttribute("geometry", `primitive: sphere; radius: 1`);
 			model.setAttribute(
-				"gps-new-entity-place",
+				"gps-entity-place",
 				`latitude: ${39.734168 + (element.lat - 0.0001) / 10000 - 0.000075}; longitude: ${
 					-8.821121 + element.lon / 10000 - 0.00004
 				};`
@@ -59,8 +59,8 @@ function loadApples(json) {
 	AFRAME.registerComponent("clicker", {
 		init: function () {
 			this.el.addEventListener("click", (e) => {
-				let lat = e.srcElement.components["gps-new-entity-place"].attrValue.latitude;
-				let lon = e.srcElement.components["gps-new-entity-place"].attrValue.longitude;
+				let lat = e.srcElement.components["gps-entity-place"].attrValue.latitude;
+				let lon = e.srcElement.components["gps-entity-place"].attrValue.longitude;
 				let alt = e.srcElement.components["position"].data.y;
 				let model = document.createElement("a-text");
 
@@ -77,12 +77,12 @@ function loadApples(json) {
 				);
 
 				model.setAttribute(
-					"gps-new-entity-place",
+					"gps-entity-place",
 					`latitude: ${lat}; longitude: ${lon};`
 				);
 				model.setAttribute("position", `0 ${alt + 0.2} 0`);
 				model.setAttribute("scale", "1 1 1");
-				model.setAttribute("look-at", "[gps-new-camera]");
+				model.setAttribute("look-at", "[gps-camera]");
 				model.setAttribute("color", "blue");
 				model.setAttribute("clickerremove", null);
 				scene.appendChild(model);
@@ -133,7 +133,7 @@ function renderPlaces(places) {
 		// 	z: 0,
 		// });
 		model.setAttribute(
-			"gps-new-entity-place",
+			"gps-entity-place",
 			`latitude: ${latitude}; longitude: ${longitude};`
 		);
 		model.setAttribute("gltf-model", "./assets/asset.gltf");
